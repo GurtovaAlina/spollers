@@ -1,0 +1,78 @@
+// Файл обнуляющих стилей
+@import "_nullstyle";
+@import "_adaptiv";
+
+
+html, body {
+    height: 100%;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 16px;
+    background-color: #383838;
+}
+
+.wrapper {
+    min-height: 100%;
+    padding: 50px;
+}
+
+.block {
+    margin: 0 0 30px 0;
+}
+.block__item {
+    margin: 0 0 10px 0;
+}
+.block__title {
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+/*.block._init - технический класс*/
+.block._init .block__title {
+    cursor: pointer;
+}
+.block._init .block__title {
+    padding: 10px 40px 10px 10px;
+}
+// +-
+.block._init .block__title::before,
+.block._init .block__title::after {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transition: transform 0.3s ease 0s;
+}
+// +
+.block._init .block__title::after {
+    transform: rotate(-90deg);
+}
+// -
+.block._init .block__title._active::after {
+    transform: rotate(0deg);
+}
+
+
+.block__text {
+    padding: 0 10px 10px;
+    line-height: 130%;
+}
+.block_1 .block__item {
+    background-color: #77608d;
+}
+.block_2 .block__item {
+    background-color: #794f45;
+}
+.block_3 .block__item {
+    background-color: #7a956b;
+}
+
